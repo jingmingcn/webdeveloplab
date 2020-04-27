@@ -26,6 +26,7 @@ enable_checker: true
 ```
 
 ```XHTML 1.1:```
+
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
@@ -101,12 +102,12 @@ index.html页面的源代码如下：
 
 HTML5引入了一种方法，使Web设计人员可以通过```<meta>```标记来控制视口（用户在网页上的可见区域）（请参见下面的“设置视口”示例）。
 
-| 属性       | 值                                                              | 描述                               |
-|------------|-----------------------------------------------------------------|------------------------------------|
-| charset    | character_set                                                   | 指定HTML文档的字符编码             |
-| content    | text                                                            | 给出与http-equiv或name属性关联的值 |
-| http-equiv | content-type default-style refresh                              | 为内容属性的信息/值提供HTTP标头    |
-| name       | application-name author description generator keywords viewport | 指定元数据的名称                   |
+| 属性       | 值                                                           | 描述                               |
+| ---------- | ------------------------------------------------------------ | ---------------------------------- |
+| charset    | character_set                                                | 指定HTML文档的字符编码             |
+| content    | text                                                         | 给出与http-equiv或name属性关联的值 |
+| http-equiv | content-type <br> default-style <br> refresh                          | 为内容属性的信息/值提供HTTP标头    |
+| name       | application-name <br> author <br> description <br> generator <br> keywords <br> viewport | 指定元数据的名称                   |
 
 ```<meta>```标签示例：
 
@@ -632,7 +633,11 @@ We hope they succeed.</p>
 
 ## html5超链接
 
-本节讲述```<a>```标签。
+本节讲述```<a>```标签。示例：
+
+```html
+<a href="https://www.bing.com">Visit Bing!</a>
+```
 
 ### ```<a>```标签
 ```<a>```标记定义超链接，该超链接用于从一个页面链接到另一页面。
@@ -641,43 +646,86 @@ We hope they succeed.</p>
 
 默认情况下，链接将在所有浏览器中显示如下：
 
-*未访问的链接带有下划线并显示为蓝色
+* 未访问的链接带有下划线并显示为蓝色
 
-*已访问链接带有下划线和紫色
+* 已访问链接带有下划线和紫色
 
-*活动的链接带有下划线和红色
+* 活动的链接带有下划线和红色
 
-*提示：如果<a>标记没有href属性，则它只是超链接的占位符。
 
-*提示：如果href属性不存在，则不会显示以下属性：download，hreflang，media，rel，target和type。
+**注意事项**
 
-*提示：除非您指定其他目标，否则通常在当前浏览器窗口中显示链接页面。
+* 提示：如果`<a>`标记没有`href`属性，则它只是超链接的占位符。
 
-*提示：使用CSS设置链接样式：CSS链接和CSS按钮。
+* 提示：如果`href`属性不存在，则不会显示以下属性：`download`，`hreflang`，`media`，`rel`，`target`和`type`。
+
+* 提示：除非您指定其他目标，否则通常在当前浏览器窗口中显示链接页面。
+
+* 提示：使用`CSS`设置链接样式：`CSS`链接和`CSS`按钮。
 
 **属性**
 
-| 属性           | 值                                                                                                | 描述                                                                                                     |
-|----------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| download       | filename                                                                                          | 指定当用户单击超链接时将下载目标。                                                                       |
-| href           | URL                                                                                               | 指定链接转到的页面的URL                                                                                  |
-| hreflang       | language_code                                                                                     | 指定链接文档的语言                                                                                       |
-| media          | media_query                                                                                       | 指定链接文档针对哪种媒体/设备进行了优化                                                                  |
-| ping           | list_of_URLs                                                                                      | 指定以空格分隔的URL列表，当链接被链接时，带有正文ping的发布请求将由浏览器（在后台）发送。 通常用于跟踪。 |
-| referrerpolicy | no-referrer\ no-referrer-when-downgrade\ origin\ origin-when-cross-origin\ unsafe-url                 | 指定要发送的引荐来源                                                                                     |
-| rel            | alternate author bookmark external help license next nofollow noreferrer noopener prev search tag | 指定当前文档和链接文档之间的关系                                                                         |
-| target         | _blank _parent _self _top framename                                                               | 指定在何处打开链接的文档                                                                                 |
-| type           | media_type                                                                                        | 指定链接文档的媒体类型                                                                                   |
+| 属性           | 值                                                           | 描述                                                         |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| download       | filename                                                     | 指定当用户单击超链接时将下载目标。                           |
+| href           | URL                                                          | 指定链接转到的页面的URL                                      |
+| hreflang       | language_code                                                | 指定链接文档的语言                                           |
+| media          | media_query                                                  | 指定链接文档针对哪种媒体/设备进行了优化                      |
+| ping           | list\_of\_URLs                                                 | 指定以空格分隔的URL列表，当链接被链接时，带有正文ping的发布请求将由浏览器（在后台）发送。 通常用于跟踪。 |
+| referrerpolicy | no-referrer <br/> no-referrer-when-downgrade <br/> origin <br/> origin-when-cross-origin <br/> unsafe-url | 指定要发送的引荐来源                                         |
+| rel            | alternate <br/>author <br/> bookmark <br/> external <br/> help <br/> license <br/> next <br/> nofollow <br/> noreferrer <br/> noopener <br/> prev <br/> search <br/> tag | 指定当前文档和链接文档之间的关系                             |
+| target         | \_blank <br/>\_parent <br/> \_self  <br/>\_top <br/> framename  | 指定在何处打开链接的文档                                     |
+| type           | media_type                                                   | 指定链接文档的媒体类型                                       |
 
-
-
-
-### html5字符集与颜色
 
 ## html5多媒体
+使用html5 多媒体标签可以在文档中添加图像、音频、视频内容。
+
 ### html5图像
+
+`<img>`标签
+
+```html
+<img src="https://pic1.zhimg.com/v2-e327160ba23d1bc7c457b63798b85a69_1200x500.jpg" alt="Smiley face" height="420">
+```
+
+`<img>`标记在HTML页面中定义图像。
+
+`<img>`标记具有两个必需的属性：`src`和`alt`。
+
+注意：从技术上讲，图像不是插入到HTML页面中，而是将图像链接到HTML页面。 `<img>`标签为引用的图像创建一个容纳空间。
+
+提示：要将图像链接到另一个文档，只需将`<img>`标记嵌套在`<a>`标记内。
+
+
 ### html5音视频
 
+`<audio>`标签定义声音，例如音乐或其他音频流。
 
+当前，`<audio>`元素支持3种文件格式：`MP3`，`WAV`和`OGG`：
 
+`<audio>`示例：
 
+```html
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+```
+
+提示：`<audio>`和`</audio>`之间的任何文本将在不支持`<audio>`标记的浏览器中显示。
+
+`<video>`标签指定视频，例如影片剪辑或其他视频流。
+
+当前，`<video>`元素支持3种视频格式：`MP4`，`WebM`和`Ogg`：
+
+```html
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+```
+
+提示：`<video>`和`</video>`标记之间的所有文本将在不支持`<video>`元素的浏览器中显示。
