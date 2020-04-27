@@ -45,9 +45,13 @@ index.html 页面的源代码如下：
 <!DOCTYPE html>
 <html>
   <head></head>
-  <body></body>
+  <body>
+    Hello World!
+  </body>
 </html>
 ```
+如下图所示，预览index.html文档内容，后续实验内容，请自行实验每一个html5标签，并在预览界面中查看显示效果。
+![图片描述](https://doc.shiyanlou.com/courses/uid1361580-20200427-1587969070231/wm)
 
 ```checker
 - name: check index.html exist
@@ -216,7 +220,16 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 
 示例：
 
-
+```html
+<article>
+  <header>
+    <h1>Most important heading here</h1>
+    <h2>Less important heading here</h2>
+    <p>Some additional information here</p>
+  </header>
+  <p>Lorem Ipsum dolor set amet....</p>
+</article>
+```
 
 
 
@@ -355,7 +368,7 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 * 回到顶部链接
 * 相关文件
 
-一个文档中可以包含多个<footer>元素。
+一个文档中可以包含多个`<footer>`元素。
 
 示例：
 
@@ -786,12 +799,4 @@ The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
 </video>
 ```
 
-提示：`<video>`和`</video>`标记之间的所有文本将在不支持`<video>`
-
-
-
-
-
-
-
-元素的浏览器中显示。
+提示：`<video>`和`</video>`标记之间的所有文本将在不支持`<video>`元素的浏览器中显示。
