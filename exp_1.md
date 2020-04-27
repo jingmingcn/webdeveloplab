@@ -31,9 +31,9 @@ enable_checker: true
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 ```
 
-- `<html>`标签
-- `<head>`标签
-- `<body>`标签
+* `<html>`标签
+* `<head>`标签
+* `<body>`标签
 
 `<html>`与`</html>`标签定义了文档的开始和结束，文档由头部和主体组成，文档的头部由`<head>`标签定义，主体由`<body>`标签定义。
 
@@ -50,7 +50,7 @@ index.html 页面的源代码如下：
 ```
 
 ```checker
-- name: check index.html exist
+* name: check index.html exist
   script: |
     #!/bin/bash
     ls -l /home/project/index.html
@@ -59,8 +59,8 @@ index.html 页面的源代码如下：
 
 ## 头部元素
 
-- `<title>`标签
-- `<meta>`标签
+* `<title>`标签
+* `<meta>`标签
 
 ### `<title>`标签
 
@@ -68,9 +68,9 @@ index.html 页面的源代码如下：
 
 `<title>`元素：
 
-- 在浏览器工具栏中定义标题
-- 将页面添加到收藏夹时为其提供标题
-- 在搜索引擎结果中显示页面标题
+* 在浏览器工具栏中定义标题
+* 将页面添加到收藏夹时为其提供标题
+* 在搜索引擎结果中显示页面标题
 
 在 index.html 文档中添加`<title>`元素。
 
@@ -154,7 +154,7 @@ Viewport 是用户在网页上的可见区域。 它随设备的不同而不同-
 实验内容：在`index.html`文件中实验`<meta>`标签。
 
 ```checker
-- name: check <meta> tag exist in file index.html
+- name: check meta tag exist in file index.html
   script: |
     #!/bin/bash
     grep 'meta' /home/project/index.html
@@ -178,22 +178,6 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 | `<div>`     | 定义文档中的节                  |
 | `<span>`    | 定义文档中的行内元素            |
 
-### `<header>`标签
-
-`<header>`元素表示介绍性内容或一组导航链接的容器。
-
-`<header>`元素通常包含：
-
-- 一个或多个标题元素（`<h1>`-`<h6>`）
-- 徽标或图标
-- 作者信息
-
-一个文档中可以包含多个`<header>`元素。
-
-注意：`<header>`标记不能放在`<footer>`，`<address>`或另一个`<header>`元素内。
-
-示例：
-
 ```html
 <article>
   <header>
@@ -205,15 +189,36 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 </article>
 ```
 
-实验内容：在`index.html`文件中实验`<header>`标签。
+实验内容：在```index.html```文件中实验```<header>```标签。
+
 
 ```checker
-- name: check <header> tag exist in file index.html
+- name: check header tag exist in file index.html
   script: |
     #!/bin/bash
     grep 'header' /home/project/index.html
   error: 在 index.html 文件中没有找到 &lt;header&gt; 标签
 ```
+
+### `<header>`标签
+
+`<header>`元素表示介绍性内容或一组导航链接的容器。
+
+`<header>`元素通常包含：
+
+* 一个或多个标题元素（`<h1>`-`<h6>`）
+* 徽标或图标
+* 作者信息
+
+一个文档中可以包含多个`<header>`元素。
+
+注意：`<header>`标记不能放在`<footer>`，`<address>`或另一个`<header>`元素内。
+
+示例：
+
+
+
+
 
 ### `<nav>`标签
 
@@ -234,7 +239,7 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 ```
 
 ```checker
-- name: check <nav> tag exist in file index.html
+- name: check nav tag exist in file index.html
   script: |
     #!/bin/bash
     grep 'nav' /home/project/index.html
@@ -249,10 +254,10 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 
 `<article>`元素的潜在来源：
 
-- 论坛帖子
-- 博客文章
-- 新闻故事
-- 评论
+* 论坛帖子
+* 博客文章
+* 新闻故事
+* 评论
 
 示例：
 
@@ -275,7 +280,7 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 ```
 
 ```checker
-- name: check <article> tag exist in file index.html
+- name: check article tag exist in file index.html
   script: |
     #!/bin/bash
     grep 'article' /home/project/index.html
@@ -298,7 +303,7 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 ```
 
 ```checker
-- name: check <section> tag exist in file index.html
+- name: check section tag exist in file index.html
   script: |
     #!/bin/bash
     grep 'section' /home/project/index.html
@@ -330,7 +335,7 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 ```
 
 ```checker
-- name: check <aside> tag exist in file index.html
+- name: check aside tag exist in file index.html
   script: |
     #!/bin/bash
     grep 'aside' /home/project/index.html
@@ -343,12 +348,12 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 
 `<footer>`元素通常包含：
 
-- 作者信息
-- 版权信息
-- 联系信息
-- 网站地图
-- 回到顶部链接
-- 相关文件
+* 作者信息
+* 版权信息
+* 联系信息
+* 网站地图
+* 回到顶部链接
+* 相关文件
 
 一个文档中可以包含多个<footer>元素。
 
@@ -365,7 +370,7 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 ```
 
 ```checker
-- name: check <footer> tag exist in file index.html
+- name: check footer tag exist in file index.html
   script: |
     #!/bin/bash
     grep 'footer' /home/project/index.html
@@ -396,7 +401,7 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 ```
 
 ```checker
-- name: check <details> tag exist in file index.html
+- name: check details tag exist in file index.html
   script: |
     #!/bin/bash
     grep 'details' /home/project/index.html
@@ -404,7 +409,7 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 ```
 
 ```checker
-- name: check <summary> tag exist in file index.html
+- name: check summary tag exist in file index.html
   script: |
     #!/bin/bash
     grep 'summary' /home/project/index.html
@@ -427,7 +432,7 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 `<div>`元素通常用作其他 HTML 元素的容器，以使用 CSS 对其进行样式设置或使用 JavaScript 执行某些任务。
 
 ```checker
-- name: check <div> tag exist in file index.html
+- name: check div tag exist in file index.html
   script: |
     #!/bin/bash
     grep 'div' /home/project/index.html
@@ -447,7 +452,7 @@ html5 结构标签用于搭建页面主体内容结构，形成不同的区块�
 `<span>`标记本身并没有提供视觉上的变化，但是标记后，您可以使用 CSS 设置样式或使用 JavaScript 对其进行操作。
 
 ```checker
-- name: check <span> tag exist in file index.html
+- name: check span tag exist in file index.html
   script: |
     #!/bin/bash
     grep 'span' /home/project/index.html
@@ -535,9 +540,9 @@ comment 标签用于在源代码中插入注释。 注释不会显示在浏览�
 
 ## html5 格式化标签
 
-- 文本格式化标签
-- 引用和术语定义标签
-- html5 新增格式化标签
+* 文本格式化标签
+* 引用和术语定义标签
+* html5 新增格式化标签
 
 ### 文本格式化标签
 
@@ -697,21 +702,21 @@ The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
 
 默认情况下，链接将在所有浏览器中显示如下：
 
-- 未访问的链接带有下划线并显示为蓝色
+* 未访问的链接带有下划线并显示为蓝色
 
-- 已访问链接带有下划线和紫色
+* 已访问链接带有下划线和紫色
 
-- 活动的链接带有下划线和红色
+* 活动的链接带有下划线和红色
 
 **注意事项**
 
-- 提示：如果`<a>`标记没有`href`属性，则它只是超链接的占位符。
+* 提示：如果`<a>`标记没有`href`属性，则它只是超链接的占位符。
 
-- 提示：如果`href`属性不存在，则不会显示以下属性：`download`，`hreflang`，`media`，`rel`，`target`和`type`。
+* 提示：如果`href`属性不存在，则不会显示以下属性：`download`，`hreflang`，`media`，`rel`，`target`和`type`。
 
-- 提示：除非您指定其他目标，否则通常在当前浏览器窗口中显示链接页面。
+* 提示：除非您指定其他目标，否则通常在当前浏览器窗口中显示链接页面。
 
-- 提示：使用`CSS`设置链接样式：`CSS`链接和`CSS`按钮。
+* 提示：使用`CSS`设置链接样式：`CSS`链接和`CSS`按钮。
 
 **属性**
 
@@ -781,4 +786,12 @@ The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
 </video>
 ```
 
-提示：`<video>`和`</video>`标记之间的所有文本将在不支持`<video>`元素的浏览器中显示。
+提示：`<video>`和`</video>`标记之间的所有文本将在不支持`<video>`
+
+
+
+
+
+
+
+元素的浏览器中显示。
