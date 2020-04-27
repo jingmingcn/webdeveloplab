@@ -50,7 +50,7 @@ index.html 页面的源代码如下：
 ```
 
 ```checker
-* name: check index.html exist
+- name: check index.html exist
   script: |
     #!/bin/bash
     ls -l /home/project/index.html
