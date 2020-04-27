@@ -664,8 +664,24 @@ We hope they succeed.</p>
 | hreflang       | language_code                                                                                     | 指定链接文档的语言                                                                                       |
 | media          | media_query                                                                                       | 指定链接文档针对哪种媒体/设备进行了优化                                                                  |
 | ping           | list_of_URLs                                                                                      | 指定以空格分隔的URL列表，当链接被链接时，带有正文ping的发布请求将由浏览器（在后台）发送。 通常用于跟踪。 |
-| referrerpolicy | no-referrer\ no-referrer-when-downgrade\ origin\ origin-when-cross-origin\ unsafe-url                 | 指定要发送的引荐来源                                                                                     |
-| rel            | alternate author bookmark external help license next nofollow noreferrer noopener prev search tag | 指定当前文档和链接文档之间的关系                                                                         |
+| referrerpolicy | no-referrer\
+ no-referrer-when-downgrade\
+ origin\
+ origin-when-cross-origin\
+ unsafe-url                 | 指定要发送的引荐来源                                                                                     |
+| rel            | alternate\
+ author\
+ bookmark\
+ external\
+ help\
+ license\
+ next\
+ nofollow\
+ noreferrer\
+ noopener\
+ prev\
+ search\
+ tag | 指定当前文档和链接文档之间的关系                                                                         |
 | target         | _blank _parent _self _top framename                                                               | 指定在何处打开链接的文档                                                                                 |
 | type           | media_type                                                                                        | 指定链接文档的媒体类型                                                                                   |
 
